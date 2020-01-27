@@ -16,7 +16,7 @@ newBtn.addEventListener("click", () => {
           "rounded",
           "shadow-lg",
           "cursor-pointer",
-          "hover:bg-green-500"
+          "hover:bg-blue-500"
         );
         newTodo.innerHTML = newText.value;
         newText.value = "";
@@ -37,21 +37,21 @@ newText.addEventListener("keyup", event => {
     if (element.localName == "li") {
       if (convertTo == "completed") {
         element.classList.add(
-          "text-red-500",
+          "text-yellow-500",
           "line-through",
-          "hover:bg-red-500",
+          "hover:bg-purple-500",
           "hover:text-white"
         );
         element.classList.remove("hover:bg-green-500");
       } 
       else {
         element.classList.remove(
-          "text-red-500",
+          "text-yellow-500",
           "line-through",
-          "hover:bg-red-500",
+          "hover:bg-purple-500",
           "hover:text-white"
         );
-        element.classList.add("hover:bg-green-500");
+        element.classList.add("hover:bg-blue-500");
       }
       destination.appendChild(element);
     }
